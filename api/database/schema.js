@@ -11,7 +11,7 @@ import { relations } from "drizzle-orm";
 export const usersTable = pgTable("users", { 
   id: integer("id").generatedAlwaysAsIdentity().primaryKey(),
   full_name: varchar("full_name").notNull(),
-  email: varchar("full_name").notNull(),
+  email: varchar("email").notNull(),
   birth_date: date("birth_date").notNull(),
   description: varchar("short_description", { length: 500 }).notNull(),
   address: varchar("address").notNull(),
